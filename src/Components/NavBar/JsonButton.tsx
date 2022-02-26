@@ -18,14 +18,13 @@ export default function JSONButton() {
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        setErrMessage('')
         e.preventDefault()
+        setErrMessage('')
         try {
             const obj = JSON.parse(data)
             reInitImages(obj)
             setIsOpen(false)
         } catch (error: any) {
-            console.log(typeof error)
             setErrMessage(error.message)
         }
     }

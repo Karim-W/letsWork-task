@@ -19,7 +19,7 @@ export default function Pagination(props: IPaginationProps) {
                 Array(totalPages).fill(0).map((_, index) => {
                     return (<div key={index}
                         onClick={() => { handleCLick(index) }}
-                        className={`p-3 ${index === currentPage ? "bg-gray-100 border-2  text-black hover:bg-gray-200" : "bg-[#3078ff]  text-white hover:bg-[#6094f5]"}  px-4 rounded-lg hover:scale-95 duration-300`}>
+                        className={`p-3 ${index !== currentPage ? "bg-gray-100 border-2  text-black hover:bg-gray-200" : "bg-[#3078ff]  text-white hover:bg-[#6094f5]"}  px-4 rounded-lg hover:scale-95 duration-300`}>
                         {index + 1}
                     </div>)
                 })
